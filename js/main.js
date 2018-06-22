@@ -110,23 +110,25 @@ dropdown.onchange = function() {
   var details = document.getElementById('details');
   var goodDay = document.getElementById('goodDay');
   var badDay = document.getElementById('badDay');
-  /*Creating a function, storing it as avaliable.
+  /*Creating a function, storing it as a valiable.
    This function removes the animate.css classes from an element
    so that when they get re-applied, the animation happens again */
   var animation = function() {
-    container.className = 'form-group displayInfo';
+  container.className = 'form-group displayInfo';
   };
 
 
   //Loop through the Array
   for(var i = 0; i < signs.length; i++) {
-    /*If the value selected is signs[0].name or signs[2].name
-     AND the value of i = 2, then do this block of code. The i = 2 is
-     necessary because signs[i].name has a value regardless of the loop,
-     so if a user selects signs[2].name, but the loop has just begun (i = 0),
+    /* i[0]Aquarius AND i[2]Aries need to be "an"for it'sn ame(just grammer)
+    to perform this, we create if an else if.
+    If the value selected is signs[0].name or signs[2].name
+    AND the value of i = 2, then do this block of code. The i = 2 is
+    necessary because signs[i].name has a value regardless of the loop,
+    so if a user selects signs[2].name, but the loop has just begun (i = 0),
     then the conditional will evaluate as 'true' and execute the code, but will
     display all the signs[0] data, not the signs[2] data. */
-    if(this.value == signs[0].name || this.value == signs[2].name && i == 2) {
+    if(this.value == signs[0].name && i == 0 || this.value == signs[2].name && i == 2) {
       //Change all the data according to what object in the signs array we are targeting
       sign.textContent = "You are an " + signs[i].name + "!";
       icon.src = signs[i].image;
@@ -137,7 +139,7 @@ dropdown.onchange = function() {
       badDay.textContent = "Bad day: " + signs[i].badDay;
 
       // Add these classes to 'container' - the last two are from animate.css
-      container.className = "form-group displayInfo animated zoomIn";
+      container.className = "form-group displayInfo animated fadeInUp";
 
       // This 'animation' function is called 1 second after the classes are added, using the setTimeout() method, so the animation can take place.
       setTimeout(animation, 1000);
@@ -151,6 +153,9 @@ dropdown.onchange = function() {
       details.textContent = "All about: " + signs[i].details;
       goodDay.textContent = "Good day: " + signs[i].goodDay;
       badDay.textContent = "Bad day: " + signs[i].badDay;
+
+      // Add these classes to 'container' - the last two are from animate.css
+      container.className = "form-group displayInfo animated fadeInUp";
 
       setTimeout(animation, 1000);
     };

@@ -3,3 +3,18 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-family: 'Kalam', cursive;
+}
+
+/* Header */
+.headerH1 {
+  margin: 8% 0;
+}
+
+/* Section - result of zodiac sign */
+section.result {
+  width: 90%;
+  margin: 0 auto;
+}
