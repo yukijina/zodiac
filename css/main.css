@@ -6,6 +6,11 @@
 
 body {
   font-family: 'Kalam', cursive;
+  background-image: linear-gradient(rgba(231, 43, 247, 0.7), rgba(241, 53, 126, 0.7),rgba(232, 254, 52, 0.72),rgba(94, 244, 159, 0.7));
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-attachment: fixed;
 }
 
 /* Header */
@@ -17,4 +22,20 @@ body {
 section.result {
   width: 90%;
   margin: 0 auto;
+}
+
+/* media query for responsive design */
+@media(max-width: 670px) {
+  .headerH1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media(max-width: 437px) {
+  .headerH1 {
+    font-size: 2.5rem;
+  }
+  label.h4 {
+    font-size: 1.2rem;
+  }
 }
