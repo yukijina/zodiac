@@ -5,17 +5,27 @@
 }
 
 body {
-  font-family: 'Markazi Text', serif;
-  background-image: linear-gradient(rgba(231, 43, 247, 0.7), rgba(241, 53, 126, 0.7),rgba(232, 254, 52, 0.72),rgba(94, 244, 159, 0.7)), url(https://www.thegreatcourses.com/media/catalog/product/cache/1/image/800x600/0f396e8a55728e79b48334e699243c07/1/8/1810---base_image_4.1424267816.jpg);
+  font-family: 'Lora', serif;
+  background: linear-gradient(to right, rgba(14, 45, 107, 0.46), rgb(34, 29, 96, 0.5)), url(https://www.thegreatcourses.com/media/catalog/product/cache/1/image/800x600/0f396e8a55728e79b48334e699243c07/1/8/1810---base_image_4.1424267816.jpg);
   background-size: cover;
   background-position: center;
   height: 100%;
   background-attachment: fixed;
+  color: #fff;
 }
 
 /* Header */
 .headerH1 {
   margin: 8% 0;
+  font-family: 'Marck Script', cursive;
+}
+
+/* Dropdown Menu */
+label h3 {
+  font-size: 1.5rem;
+}
+#myList {
+  height: 3rem;
 }
 
 /* Section - result of zodiac sign */
